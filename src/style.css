@@ -1,0 +1,39 @@
+.node {
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.node-item {
+    min-width: 300px;
+    min-height: 100px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.node:hover, .node[data-selected="true"] {
+    outline: 1px dashed #ff7800;
+    cursor: pointer;
+}
+
+.horizontal {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.vertical {
+    display: flex;
+    flex-flow: column;
+}
+
+.both {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.listItem {
+    clear: both;
+}

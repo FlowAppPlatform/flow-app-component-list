@@ -1,0 +1,55 @@
+{
+  "name": "flow-app-component-list",
+  "version": "1.0.0",
+  "description": "list Component - A building block to be used in Flow App Platform",
+  "main": "dist/list.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 0",
+		"build": "webpack --mode production",
+		"prepare": "rm -rf ./dist && npm run build"
+	},
+  "keywords": [
+    "flow",
+    "cloudboost",
+    "flowappplatform"
+  ],
+  "author": "Hackerbay Admin",
+  "license": "ISC",
+  "dependencies": {
+    "flow-app-component": "^1.0.17"
+  },
+  "peerDependencies": {
+    "react": "16.3.2",
+    "react-dom": "16.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "8.2.3",
+    "babel-loader": "7.1.4",
+    "babel-plugin-dynamic-import-node": "1.2.0",
+    "babel-plugin-react-transform": "3.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "babel-plugin-transform-imports": "^1.5.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-inline-elements": "6.22.0",
+    "babel-plugin-transform-react-jsx-source": "6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "0.4.13",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "0.4.4",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "webpack": "4.19.1",
+    "webpack-cli": "^2.1.4",
+    "react": "16.3.2",
+    "react-dom": "16.3.2"
+  }
+}
