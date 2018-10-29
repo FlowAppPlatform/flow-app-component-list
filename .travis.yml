@@ -1,0 +1,8 @@
+deploy:
+  provider: npm
+  email: hello@hackerbay.io
+  api_key:
+    secure: QRHz+C2bV1M1XVFaTfWjPgDs7nbHMIAUYs/ODnX8Ww04lr6iLDO4QHAsM5eHWyD8O5eaKLI9UpjnK7Ihyo7j6tL5VqGnVNZALsbqNAmygYNf4ssrsscs4W11lz3wWKdeGDzORQnyYUiKZPnU2md81/TLmXptOd26weRg4mBlKcou9sYYKFG6+bCjAX7EVUwAtWFiFTIz81XkObCEgmp0mX7rxBNpFVO2dxNjmg33prE0VjrLihT1KMpxQHaiQd0rAAqcFyivn7o2Aob1sZhQ0ezXObcy/mwPZf4maeSMoElXPLbJM+G8zAA5OQiFre9NwFcAYVGP7hMxIOLOcDkqZgIVaiZ8L2Ba/j+UtdxSEi/ulhGGprj/2u+Sx5rGnLIhIpx2EO9VCdqgpC3p0z0B663vjYAYkgk7BZXEegXwmSwB5/QP+RRwHDpJl98zeJh982GNPQWutKOojxsji0xIlu6wDhvb5frb5MNJBZLuVFc9BdGtVsFicRGaFdD01/kgJQ0X6JJh4GXEtPGNFgPdjUtxEG4S9vdS6j1JZ7sZLz8Aun4k0qJURh88az9Bk/nfWTb6zQ+BONuhoVTbjBHItOWI1H/I5JrJeAbw/VXxNVexBV6EohyOJq2x+f62KSTO4r1YO13UCOxpr6n4hUoX7QPHDKmD7oLS2P85EevAHSQ=
+  on:
+    tags: true
+    repo: FlowAppPlatform/flow-app-component-list
