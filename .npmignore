@@ -3,4 +3,6 @@ src
 .prettierrc
 .babelrc
 .gitignore
+.travis.yml
 webpack.config.js
+nwb.config.js
