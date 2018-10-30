@@ -7,78 +7,72 @@ import ListItem from './ListItem';
 import './style.css';
 
 class ListComponent extends AppComponent {
-  static properties = {
-    columns: [],
-
-    properties: [
-      {
-        categoryName: 'General',
-        categoryDescription: 'Basic settings for List Component.',
-        properties: [
-          {
-            id: 'columns',
-            name: 'Select Columns',
-            type: 'select-columns',
-            options: {},
-            data: { table: null, columns: [] },
-          },
-          {
-            id: 'size',
-            name: 'Enter Page Size',
-            type: 'number',
-            options: {},
-            data: null,
-          },
-          {
-            id: 'filter',
-            name: 'Add Filter',
-            type: 'query',
-            options: {},
-            data: { table: null, query: null },
-          },
-          {
-            id: 'layout',
-            name: 'Layout',
-            type: 'toggle',
-            options: {
-              values: [
-                { text: 'Horizontal', value: 'horizontal' },
-                { text: 'Vertical', value: 'vertical' },
-                { text: 'Both', value: 'both' },
-              ],
-            },
-            data: null,
-          },
-        ],
-      },
-      {
-        categoryName: 'Events',
-        categoryDescription: 'Events for the list',
-        properties: [
-          {
-            id: 'event',
-            name: 'Events',
-            type: 'graph',
-            options: {},
-            data: null,
-          },
-        ],
-      },
-    ],
-
-    iconUrl: '/assets/images/list-component.png',
-    name: 'List',
-    componentType: 'list',
-    category: 'Views',
-    parent: null,
-    allowsChildren: false
-  };
-
   constructor() {
     super();
     const newState = {
       listItems: [],
-      ...ListComponent.properties
+      columns: [],
+      properties: [
+        {
+          categoryName: 'General',
+          categoryDescription: 'Basic settings for List Component.',
+          properties: [
+            {
+              id: 'columns',
+              name: 'Select Columns',
+              type: 'select-columns',
+              options: {},
+              data: { table: null, columns: [] },
+            },
+            {
+              id: 'size',
+              name: 'Enter Page Size',
+              type: 'number',
+              options: {},
+              data: null,
+            },
+            {
+              id: 'filter',
+              name: 'Add Filter',
+              type: 'query',
+              options: {},
+              data: { table: null, query: null },
+            },
+            {
+              id: 'layout',
+              name: 'Layout',
+              type: 'toggle',
+              options: {
+                values: [
+                  { text: 'Horizontal', value: 'horizontal' },
+                  { text: 'Vertical', value: 'vertical' },
+                  { text: 'Both', value: 'both' },
+                ],
+              },
+              data: null,
+            },
+          ],
+        },
+        {
+          categoryName: 'Events',
+          categoryDescription: 'Events for the list',
+          properties: [
+            {
+              id: 'event',
+              name: 'Events',
+              type: 'graph',
+              options: {},
+              data: null,
+            },
+          ],
+        },
+      ],
+      iconUrl: '/assets/images/list-component.png',
+      name: 'List',
+      componentType: 'list',
+      category: 'Views',
+      parent: null,
+      allowsChildren: false,
     };
 
     this.state = Object.assign(this.state, newState); // merge two states together, and dont lose any parent state properties.
