@@ -1,6 +1,6 @@
 {
   "name": "flow-app-component-list",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "flow-app-component-list React component",
   "main": "lib/index.js",
   "module": "es/index.js",
