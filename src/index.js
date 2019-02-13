@@ -130,11 +130,17 @@ class ListComponent extends AppComponent {
       .then(([listItems, columns]) => ({ listItems, columns }));
   }
 
+  triggerGraphEvent = () => {
+    const graphId = this.getPropertyData('event');
+    this.getElementProps().onEvent(graphId)
+  }
+
   renderContent() {
     const elemProps = this.getElementProps();
     elemProps.style = this.getDefaultStyle() || {};
     return (
       <div
+        onMouseOver={this.triggerGraphEvent}
         className={`node ${this.getPropertyData('layout') || 'horizontal'}`}
         {...elemProps}
       >
