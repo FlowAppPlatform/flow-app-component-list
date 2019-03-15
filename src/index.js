@@ -58,8 +58,15 @@ class ListComponent extends AppComponent {
           categoryDescription: 'Events for the list',
           properties: [
             {
-              id: 'event',
-              name: 'Events',
+              id: 'load',
+              name: 'Load Event',
+              type: 'graph',
+              options: {},
+              data: null,
+            },
+            {
+              id: 'hover',
+              name: 'Hover Event',
               type: 'graph',
               options: {},
               data: null,
@@ -82,7 +89,8 @@ class ListComponent extends AppComponent {
     const { table } = this.getPropertyData('columns');
     const { listItems, columns } = await this.getListItems(table);
     // eslint-disable-next-line
-       this.setState({ listItems, columns });
+    this.setState({ listItems, columns });
+    this.triggerGraphEvent('load');
   }
 
   generateFakeObjects() {
@@ -130,9 +138,11 @@ class ListComponent extends AppComponent {
       .then(([listItems, columns]) => ({ listItems, columns }));
   }
 
-  triggerGraphEvent = () => {
-    const graphId = this.getPropertyData('event');
-    this.getElementProps().onEvent(graphId)
+  triggerGraphEvent = id => {
+    const graphId = this.getPropertyData(id);
+    if (typeof this.getElementProps().onEvent === 'function') {
+      this.getElementProps().onEvent(graphId);
+    }
   }
 
   renderContent() {
@@ -140,7 +150,7 @@ class ListComponent extends AppComponent {
     elemProps.style = this.getDefaultStyle() || {};
     return (
       <div
-        onMouseOver={this.triggerGraphEvent}
+        onMouseOver={() => this.triggerGraphEvent('hover')}
         className={`node ${this.getPropertyData('layout') || 'horizontal'}`}
         {...elemProps}
       >
